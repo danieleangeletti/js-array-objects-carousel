@@ -67,10 +67,36 @@ let counter = 0;
 
 next_button.addEventListener("click", function() {
 
-    // let my_img = document.getElementById(`img${counter}`);
-    // my_img.classList.remove("d-block");
-    // my_img.classList.add("d-none");
+    let my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-block");
+    my_img.classList.add("d-none");
 
-    console.log("CIAO");
+    counter ++;
+
+    if (counter == images.length) {
+        counter = 0;
+    }
+
+    my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-none");
+    my_img.classList.add("d-block");
+
+})
+
+previous_button.addEventListener("click", function() {
+
+    let my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-block");
+    my_img.classList.add("d-none");
+
+    counter --;
+
+    if (counter == -1) {
+        counter = images.length - 1;
+    }
+
+    my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-none");
+    my_img.classList.add("d-block");
 
 })
