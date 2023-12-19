@@ -1,0 +1,23 @@
+#my-cont {
+    height: 100vh;
+}
+
+#my-elements {
+    width: 700px;
+    height: 300px;
+    position: relative;
+}
+
+#previous {
+    position: absolute;
+    top: 3%;
+    right: 50%;
+    cursor: pointer;
+}
+
+#next {
+    position: absolute;
+    bottom: 3%;
+    right: 50%;
+    cursor: pointer;
+}
