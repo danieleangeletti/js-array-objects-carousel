@@ -31,6 +31,7 @@ const images = [
 ];
 
 const elements_container = document.getElementById("my-elements");
+const small_elements_container = document.getElementById("my-small-elements");
 const previous_button = document.getElementById("previous");
 const next_button = document.getElementById("next");
 
@@ -60,6 +61,26 @@ for (let i = 0; i < images.length; i++) {
         `
         
         elements_container.innerHTML += my_content;
+
+}
+
+let my_small_content;
+
+for (let i = 0; i < images.length; i++) {
+
+    my_small_content = `<div id = "small-img${i}" class = "w-100 special-height`;
+    
+    if (i == 0) {
+        my_small_content += ` border border-4`;
+    }
+
+    my_small_content += 
+    `">
+        <img class = "w-100 h-100" src=${images[i].url} alt="">
+    </div>
+    `
+
+    small_elements_container.innerHTML += my_small_content;
 
 }
 

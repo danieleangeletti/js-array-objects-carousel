@@ -8,18 +8,28 @@
     position: relative;
 }
 
+#my-small-elements {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.special-height {
+    height: calc(300px / 5);
+}
+
 #previous {
     position: absolute;
-    top: 30%;
-    right: 50%;
+    top: 220px;
+    right: 120px;
     cursor: pointer;
     z-index: 1;
 }
 
 #next {
     position: absolute;
-    bottom: 30%;
-    right: 50%;
+    bottom: 220px;
+    right: 120px;
     cursor: pointer;
     z-index: 1;
 }
