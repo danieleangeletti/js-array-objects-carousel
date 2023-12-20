@@ -92,6 +92,9 @@ next_button.addEventListener("click", function() {
     my_img.classList.remove("d-block");
     my_img.classList.add("d-none");
 
+    let my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.remove("border", "border-4");
+
     counter ++;
 
     if (counter == images.length) {
@@ -102,6 +105,9 @@ next_button.addEventListener("click", function() {
     my_img.classList.remove("d-none");
     my_img.classList.add("d-block");
 
+    my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.add("border", "border-4");
+
 })
 
 previous_button.addEventListener("click", function() {
@@ -109,6 +115,9 @@ previous_button.addEventListener("click", function() {
     let my_img = document.getElementById(`img${counter}`);
     my_img.classList.remove("d-block");
     my_img.classList.add("d-none");
+
+    let my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.remove("border", "border-4");
 
     counter --;
 
@@ -119,5 +128,8 @@ previous_button.addEventListener("click", function() {
     my_img = document.getElementById(`img${counter}`);
     my_img.classList.remove("d-none");
     my_img.classList.add("d-block");
+
+    my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.add("border", "border-4");
 
 })
