@@ -23,7 +23,7 @@
     top: 220px;
     right: 120px;
     cursor: pointer;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 #next {
@@ -31,7 +31,7 @@
     bottom: 220px;
     right: 120px;
     cursor: pointer;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .caption-box {
@@ -40,6 +40,6 @@
     right: 10px;
 }
 
-.my-card {
-    pointer-events: none;
+.cursor {
+    cursor: pointer;
 }

@@ -68,7 +68,7 @@ let my_small_content;
 
 for (let i = 0; i < images.length; i++) {
 
-    my_small_content = `<div id = "small-img${i}" class = "w-100 special-height`;
+    my_small_content = `<div id = "small-img${i}" class = "w-100 special-height cursor`;
     
     if (i == 0) {
         my_small_content += ` border border-4`;
@@ -133,3 +133,28 @@ previous_button.addEventListener("click", function() {
     my_small_img.classList.add("border", "border-4");
 
 })
+
+for (let i = 0; i < images.length; i++) {
+
+    const small_img = document.getElementById(`small-img${i}`);
+
+    small_img.addEventListener("click", function(){
+
+    let my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-block");
+    my_img.classList.add("d-none");
+
+    let my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.remove("border", "border-4");
+
+    counter = i;
+
+    my_img = document.getElementById(`img${counter}`);
+    my_img.classList.remove("d-none");
+    my_img.classList.add("d-block");
+
+    my_small_img = document.getElementById(`small-img${counter}`);
+    my_small_img.classList.add("border", "border-4");
+    });
+
+}
